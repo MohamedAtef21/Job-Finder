@@ -18,8 +18,8 @@ class TextIconInputView extends StatelessWidget {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
         ),
-        labelText:labelText,
-        labelStyle:TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF))
+        hintText:labelText,
+        hintStyle:TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF))
       ),
     );
   }

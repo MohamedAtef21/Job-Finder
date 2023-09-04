@@ -67,8 +67,8 @@ class _TextIconInputViewState extends State<TextIconInputPreView> {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.r),
             ),
-            labelText: widget.labelText,
-            labelStyle: TextStyle(
+            hintText: widget.labelText,
+            hintStyle: TextStyle(
               fontSize: 14,
               fontFamily: "SF",
               fontWeight: FontWeight.w400,

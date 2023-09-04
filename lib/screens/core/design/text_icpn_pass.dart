@@ -37,8 +37,8 @@ class _TextIconPassViewState extends State<TextIconPassView> {
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8.r),
               ),
-              labelText:widget.labelText,
-              labelStyle:TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),
+              hintText:widget.labelText,
+              hintStyle:TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),
             suffixIcon: GestureDetector(
                 onTap: () {
                   _passwordVisible = !_passwordVisible;

@@ -88,10 +88,9 @@ class _BottomNavigationViewState extends State<BottomNavigationView> {
 }
 
 class _ItemBottom extends StatelessWidget {
-  final String title, image;
+  final String title, image, unselectedImage;
   final VoidCallback onTap;
   final bool isSelected;
-  final String unselectedImage;
 
   const _ItemBottom(
       {Key? key,
@@ -116,7 +115,7 @@ class _ItemBottom extends StatelessWidget {
               children: [
                 SvgPicture.asset(  isSelected ?
                   "assets/icons/${image}.svg": "assets/icons/${unselectedImage}.svg",
-                 color: isSelected ? Theme.of(context).primaryColor : null,
+                // color: isSelected ? Theme.of(context).primaryColor : null,
                 ),
                 Text(
                   title,
