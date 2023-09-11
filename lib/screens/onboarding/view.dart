@@ -128,21 +128,24 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           ),
           Padding(
             padding: EdgeInsetsDirectional.only(start: 24, end: 24),
-            child: ElevatedButton(
-              onPressed: () {
-                if (currentpage == 2) {
-                  navigateTo(context, SignUpView());
-                } else {
-                  currentpage++;
-                  setState(() {});
-                }
-              },style: ButtonStyle(
-                shape: MaterialStatePropertyAll(
-                    RoundedRectangleBorder(borderRadius: BorderRadius.circular(1000))
-                )
-            ),
+            child: SizedBox(
+              height: 48.h,
+              child: ElevatedButton(
+                onPressed: () {
+                  if (currentpage == 2) {
+                    navigateTo(context, SignUpView());
+                  } else {
+                    currentpage++;
+                    setState(() {});
+                  }
+                },style: ButtonStyle(
+                  shape: MaterialStatePropertyAll(
+                      RoundedRectangleBorder(borderRadius: BorderRadius.circular(1000))
+                  )
+              ),
 
-              child: Text(currentpage == 2 ? "Get Started" : "Next"),
+                child: Text(currentpage == 2 ? "Get Started" : "Next"),
+              ),
             ),
           ),
         ],

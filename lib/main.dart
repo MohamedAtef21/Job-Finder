@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:jobfinder/screens/bottom_navigation/view.dart';
 import 'package:jobfinder/screens/core/logic/helper_method.dart';
 import 'package:jobfinder/screens/splachscreen/view.dart';
 
@@ -27,8 +26,7 @@ class MainPage extends StatelessWidget {
           home: Scaffold(
             body: PageView(
               children: [
-                SplachScreenView(),
-                //BottomNavigationView(),
+               SplachScreenView(),
               ],
             ),
           ),
