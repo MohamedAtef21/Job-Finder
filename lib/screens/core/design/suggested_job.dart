@@ -12,10 +12,10 @@ class SuggestedJobView extends StatelessWidget {
       height: 183.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.r),
-        color: Color(0xff091A7A),
+        color: const Color(0xff091A7A),
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.only(start: 16,top: 18,end: 16,bottom: 18),
+        padding: const EdgeInsetsDirectional.only(start: 16,top: 18,end: 16,bottom: 18),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -26,9 +26,9 @@ class SuggestedJobView extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Product Designer",style: TextStyle(fontSize: 18,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xffFFFFFF)),),
+                    const Text("Product Designer",style: TextStyle(fontSize: 18,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xffFFFFFF)),),
                     SizedBox(height: 4.h,),
-                    Text("Zoom • United States",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),)
+                    const Text("Zoom • United States",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),)
                   ],
                 ),
                 SizedBox(width: 70.w,),
@@ -44,27 +44,27 @@ class SuggestedJobView extends StatelessWidget {
                   height: 30.h,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100.r),
-                    color: Color(0xffFFFFFF24).withOpacity(.14),
+                    color: const Color(0xffffffff24).withOpacity(.14),
                   ),
-                  child: Center(child: Text("Fulltime",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xffFFFFFF)),)),
+                  child: const Center(child: Text("Fulltime",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xffFFFFFF)),)),
                 ),
                 Container(
                   width: 82.w,
                   height: 30.h,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100.r),
-                    color: Color(0xffFFFFFF24).withOpacity(.14),
+                    color: const Color(0xffffffff24).withOpacity(.14),
                   ),
-                  child: Center(child: Text("Remote",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xffFFFFFF)),)),
+                  child: const Center(child: Text("Remote",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xffFFFFFF)),)),
                 ),
                 Container(
                   width: 82.w,
                   height: 30.h,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100.r),
-                    color: Color(0xffFFFFFF24).withOpacity(.14),
+                    color: const Color(0xffffffff24).withOpacity(.14),
                   ),
-                  child: Center(child: Text("Design",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xffFFFFFF)),)),
+                  child: const Center(child: Text("Design",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xffFFFFFF)),)),
                 ),
               ],
             ),
@@ -76,8 +76,8 @@ class SuggestedJobView extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text("\$12K-15K",style: TextStyle(fontSize: 20,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xffFFFFFF)),),
-                      Text("/Month",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xffFFFFFF).withOpacity(.5)),),
+                      const Text("\$12K-15K",style: TextStyle(fontSize: 20,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xffFFFFFF)),),
+                      Text("/Month",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w500,color: const Color(0xffFFFFFF).withOpacity(.5)),),
                     ],
                   ),
                   ElevatedButton(onPressed: (){},
@@ -86,7 +86,7 @@ class SuggestedJobView extends StatelessWidget {
                             RoundedRectangleBorder(borderRadius: BorderRadius.circular(1000.r))
                         ),
                     ),
-                      child: Text("Apply now",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xffFFFFFF)),),
+                      child: const Text("Apply now",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xffFFFFFF)),),
                   ),
                 ],
               ),

@@ -10,7 +10,7 @@ class ApplyJobView extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text(
+          title: const Text(
             "Apply Job",
             style: TextStyle(
                 fontSize: 20,
@@ -27,7 +27,7 @@ class ApplyJobView extends StatelessWidget {
           elevation: 0,
           backgroundColor: Colors.transparent,
         ),
-        body: SingleChildScrollView(
+        body: const SingleChildScrollView(
           child: Padding(
             padding: EdgeInsetsDirectional.only(top: 34,start: 24,end: 24),
             child: Column(

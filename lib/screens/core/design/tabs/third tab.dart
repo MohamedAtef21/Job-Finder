@@ -48,7 +48,7 @@ class _PeopleViewState extends State<PeopleView> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "6 Employees For",
                     style: TextStyle(
                       fontSize: 14,
@@ -59,7 +59,7 @@ class _PeopleViewState extends State<PeopleView> {
                   SizedBox(
                     height: 4.h,
                   ),
-                  Text(
+                  const Text(
                     "UI/UX Design",
                     style: TextStyle(
                         fontSize: 12,
@@ -73,7 +73,7 @@ class _PeopleViewState extends State<PeopleView> {
                 label: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       "UI/UX Designer",
                       style: TextStyle(
                           fontSize: 12,
@@ -87,7 +87,7 @@ class _PeopleViewState extends State<PeopleView> {
                   ],
                 ),
                 backgroundColor: Colors.transparent,
-                side: BorderSide(color: Color(0xffD1D5DB)),
+                side: const BorderSide(color: Color(0xffD1D5DB)),
               ),
             ],
           ),
@@ -100,7 +100,7 @@ class _PeopleViewState extends State<PeopleView> {
                   children: [
                     Container(
                       height: 2,
-                      color: Color(0xffE5E7EB),
+                      color: const Color(0xffE5E7EB),
                     ),
                     SizedBox(height: 16.h,),
                   ],
@@ -128,7 +128,7 @@ class _ItemChat extends StatelessWidget {
     return Row(
       children: [
         CircleAvatar(
-          backgroundImage: AssetImage("assets/images/${image}.png"),
+          backgroundImage: AssetImage("assets/images/$image.png"),
         ),
         SizedBox(width: 12.w),
         Expanded(
@@ -137,7 +137,7 @@ class _ItemChat extends StatelessWidget {
             children: [
               Text(
                 name,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 14,
                     fontFamily: "SF",
                     fontWeight: FontWeight.w500),
@@ -147,7 +147,7 @@ class _ItemChat extends StatelessWidget {
               ),
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 12,
                     fontFamily: "SF",
                     fontWeight: FontWeight.w400,
@@ -159,7 +159,7 @@ class _ItemChat extends StatelessWidget {
        Column(
          crossAxisAlignment: CrossAxisAlignment.end,
          children: [
-           Text(
+           const Text(
              "Work during",
              style: TextStyle(
                  fontSize: 12,
@@ -170,7 +170,7 @@ class _ItemChat extends StatelessWidget {
            SizedBox(
              height: 2.h,
            ),
-           Text(
+           const Text(
              "5 Years",
              style: TextStyle(
                  fontSize: 12,

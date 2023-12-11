@@ -2,10 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+<key>CFBundleURLTypes</key>
+<array>
+	<dict>
+		<key>CFBundleTypeRole</key>
+		<string>Editor</string>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<!-- TODO Replace this value: -->
+			<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+			<string>com.googleusercontent.apps.162267292387-pg5ek1pab0lfgs3ur3m1e0rjg7d6cgo0</string>
+		</array>
+	</dict>
+</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Jobfinder</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>Needs Permission to Open Gallery</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Needs Permission to Open Camera</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Needs Permission to Use Microphone</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

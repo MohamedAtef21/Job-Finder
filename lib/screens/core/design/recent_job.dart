@@ -14,7 +14,7 @@ class _RecentJobViewState extends State<RecentJobView> {
   bool isSelected = false;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 103.h,
       width: 327.w,
       child: Column(
@@ -27,9 +27,9 @@ class _RecentJobViewState extends State<RecentJobView> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(widget.title,style: TextStyle(fontSize: 18,fontFamily: "SF",fontWeight: FontWeight.w500),),
+                  Text(widget.title,style: const TextStyle(fontSize: 18,fontFamily: "SF",fontWeight: FontWeight.w500),),
                   SizedBox(height: 4.h,),
-                  Text(widget.desc,style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff374151)),)
+                  Text(widget.desc,style: const TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff374151)),)
                 ],
               ),
               SizedBox(width: 110.w,),
@@ -51,30 +51,30 @@ class _RecentJobViewState extends State<RecentJobView> {
                 height: 26.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100.r),
-                  color: Color(0xffD6E4FF),
+                  color: const Color(0xffD6E4FF),
                 ),
-                child: Center(child: Text("Fulltime",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff3366FF)),)),
+                child: const Center(child: Text("Fulltime",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff3366FF)),)),
               ),
               Container(
                 width: 72.w,
                 height: 26.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100.r),
-                  color: Color(0xffD6E4FF),
+                  color: const Color(0xffD6E4FF),
                 ),
-                child: Center(child: Text("Remote",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff3366FF)),)),
+                child: const Center(child: Text("Remote",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff3366FF)),)),
               ),
               Container(
                 width: 72.w,
                 height: 26.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100.r),
-                  color: Color(0xffD6E4FF),
+                  color: const Color(0xffD6E4FF),
                 ),
-                child: Center(child: Text("Senior",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff3366FF)),)),
+                child: const Center(child: Text("Senior",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff3366FF)),)),
               ),
               SizedBox(width: 24.w,),
-              Row(
+              const Row(
                 children: [
                   Text("\$15K",style: TextStyle(fontSize: 20,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xff2E8E18)),),
                   Text("/Month",style: TextStyle(fontSize: 12,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xff6B7280)),),

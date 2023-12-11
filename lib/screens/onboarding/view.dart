@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:jobfinder/screens/core/design/main_button.dart';
+import 'package:jobfinder/screens/core/logic/auth_page.dart';
 import 'package:jobfinder/screens/core/logic/helper_method.dart';
 
-import '../create_account/sign_up.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({Key? key}) : super(key: key);
@@ -37,7 +36,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           width: 81.w,
         ),
         backgroundColor: Colors.transparent,
-        actions: [
+        actions: const [
           Padding(
             padding: EdgeInsetsDirectional.only(end: 24),
             child: Center(
@@ -59,7 +58,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           SizedBox(
             height: 375.h,
             child: PageView(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               onPageChanged: (value) {
                 currentpage = value;
                 setState(() {});
@@ -80,7 +79,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           Center(
             child: Text(
               titles[currentpage],
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 32,
                   fontFamily: "SF",
                   fontWeight: FontWeight.w500,
@@ -93,7 +92,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           Center(
             child: Text(
               desc[currentpage],
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 16,
                   fontFamily: "SF",
                   fontWeight: FontWeight.w400,
@@ -127,13 +126,13 @@ class _OnBoardingViewState extends State<OnBoardingView> {
             height: 36.h,
           ),
           Padding(
-            padding: EdgeInsetsDirectional.only(start: 24, end: 24),
+            padding: const EdgeInsetsDirectional.only(start: 24, end: 24),
             child: SizedBox(
               height: 48.h,
               child: ElevatedButton(
                 onPressed: () {
                   if (currentpage == 2) {
-                    navigateTo(context, SignUpView());
+                    navigateTo(context, const AuthPageView());
                   } else {
                     currentpage++;
                     setState(() {});

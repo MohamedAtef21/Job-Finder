@@ -14,15 +14,15 @@ class WorkTypeView extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsetsDirectional.only(top: 60,start: 24,end: 24),
+          padding: const EdgeInsetsDirectional.only(top: 60,start: 24,end: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("What type of work are you\ninterested in?",style: TextStyle(fontSize: 24,fontFamily: "SF",fontWeight: FontWeight.w500),),
+              const Text("What type of work are you\ninterested in?",style: TextStyle(fontSize: 24,fontFamily: "SF",fontWeight: FontWeight.w500),),
               SizedBox(height: 12.h,),
-              Text("Tell us what you’re interested in so we can\ncustomise the app for your needs.",style: TextStyle(fontSize: 16,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff737379)),),
+              const Text("Tell us what you’re interested in so we can\ncustomise the app for your needs.",style: TextStyle(fontSize: 16,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff737379)),),
               SizedBox(height: 36.h,),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   WorkTypeChooseView(imageInput: "wt1",textInput: "UI/UX Designer"),
@@ -30,7 +30,7 @@ class WorkTypeView extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 20.h,),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   WorkTypeChooseView(imageInput: "wt3",textInput: "Developer"),
@@ -38,7 +38,7 @@ class WorkTypeView extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 20.h,),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   WorkTypeChooseView(imageInput: "wt5",textInput: "Information\nTechnology"),
@@ -47,7 +47,7 @@ class WorkTypeView extends StatelessWidget {
               ),
               SizedBox(height: 66.h,),
               ButtonView(textInput: "Next", onClick: (){
-                navigateTo(context, WorkLocationView());
+                navigateTo(context, const WorkLocationView());
               }),
             ],
           ),

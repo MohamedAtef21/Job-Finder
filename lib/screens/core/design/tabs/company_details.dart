@@ -39,13 +39,13 @@ class _CompanyDetailsViewState extends State<CompanyDetailsView> with SingleTick
             children: [
               TabBar(
                 indicator: BoxDecoration(
-                  color: Color(0xff091A7A),
+                  color: const Color(0xff091A7A),
                   borderRadius: BorderRadius.circular(100.r),
                 ),
-                labelColor: Color(0xffFFFFFF),
-                unselectedLabelColor: Color(0xff6B7280),
+                labelColor: const Color(0xffFFFFFF),
+                unselectedLabelColor: const Color(0xff6B7280),
                 controller: tabController,
-                tabs: [
+                tabs: const [
                   Tab(text: "Desicription",),
                   Tab(text: "Company",),
                   Tab(text: "People",),
@@ -54,7 +54,7 @@ class _CompanyDetailsViewState extends State<CompanyDetailsView> with SingleTick
               Expanded(
                 child: TabBarView(
                   controller: tabController,
-                  children: [
+                  children: const [
                     //1st tab
                     DescriptionView(),
 

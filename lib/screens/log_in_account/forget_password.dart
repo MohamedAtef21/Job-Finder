@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:jobfinder/screens/core/design/text_icon_input.dart';
 
 import '../core/design/main_button.dart';
 import '../core/logic/helper_method.dart';
@@ -21,13 +20,13 @@ class ForgetPasswordView extends StatelessWidget {
           },
           icon: SvgPicture.asset("assets/icons/arrow_left.svg"),
         ),
-        leading: SizedBox(),
+        leading: const SizedBox(),
         leadingWidth: 0,
         elevation: 0,
         backgroundColor: Colors.transparent,
         actions: [
           Padding(
-            padding: EdgeInsetsDirectional.only(end: 24),
+            padding: const EdgeInsetsDirectional.only(end: 24),
             child: Image.asset(
               "assets/images/logo.png",
               height: 19.h,
@@ -38,29 +37,29 @@ class ForgetPasswordView extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsetsDirectional.only(start: 24,top: 39,end: 24),
+          padding: const EdgeInsetsDirectional.only(start: 24,top: 39,end: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Reset Password",style: TextStyle(fontSize: 28,fontFamily: "SF",fontWeight: FontWeight.w500),),
+              const Text("Reset Password",style: TextStyle(fontSize: 28,fontFamily: "SF",fontWeight: FontWeight.w500),),
               SizedBox(height: 8.h,),
-              Text("Enter the email address you used when you\njoined and we’ll send you instructions to reset\nyour password.",style: TextStyle(fontSize: 16,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff6B7280)),),
+              const Text("Enter the email address you used when you\njoined and we’ll send you instructions to reset\nyour password.",style: TextStyle(fontSize: 16,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff6B7280)),),
               SizedBox(height: 40.h,),
-              TextIconInputView(labelText: "Enter your email....",iconPath: "mail",obscureText: false,inputType: TextInputType.emailAddress),
+            //  const TextIconInputView(labelText: "Enter your email....",iconPath: "mail",obscureText: false,inputType: TextInputType.emailAddress),
               SizedBox(height: 355.h,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("You remember your password  ",style: TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xff9CA3AF)),),
+                  const Text("You remember your password  ",style: TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xff9CA3AF)),),
                   GestureDetector(onTap: (){
-                    navigateTo(context, LogInView());
+                    navigateTo(context, const LogInView());
                   },
-                      child: Text("Login",style: TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xff3366FF),),)),
+                      child: const Text("Login",style: TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xff3366FF),),)),
                 ],
               ),
               SizedBox(height: 20.h,),
               ButtonView(textInput: "Request password reset", onClick: (){
-                navigateTo(context, CheckYourEmailView());
+                navigateTo(context, const CheckYourEmailView());
               }),
             ],
           ),

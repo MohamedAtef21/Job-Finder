@@ -16,7 +16,7 @@ class JobDetailView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Job Detail",style: TextStyle(fontSize: 20,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xff111827)),),
+        title: const Text("Job Detail",style: TextStyle(fontSize: 20,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xff111827)),),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -27,22 +27,22 @@ class JobDetailView extends StatelessWidget {
         backgroundColor: Colors.transparent,
         actions: [
           Padding(
-            padding: EdgeInsetsDirectional.only(end: 24,),
+            padding: const EdgeInsetsDirectional.only(end: 24,),
             child: SvgPicture.asset("assets/icons/savedc.svg")
           ),
         ],
       ),
       body: Padding(
-        padding: EdgeInsetsDirectional.only(top: 32,start: 24,end: 24),
+        padding: const EdgeInsetsDirectional.only(top: 32,start: 24,end: 24),
         child: Stack(
           children: [
             Column(
               children: [
-                Center(child: JobDetailsContView()),
+                const Center(child: JobDetailsContView()),
                 SizedBox(height: 32.h,),
-                CompanyDetailsView(),
+                const CompanyDetailsView(),
                 ButtonView(textInput: "Apply now", onClick: (){
-                  navigateTo(context,ApplyJobView());
+                  navigateTo(context,const ApplyJobView());
                 },
                 ),
               ],

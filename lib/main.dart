@@ -1,15 +1,22 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jobfinder/screens/bottom_navigation/view.dart';
 import 'package:jobfinder/screens/core/logic/helper_method.dart';
 import 'package:jobfinder/screens/splachscreen/view.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MainPage());
 }
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -21,12 +28,13 @@ class MainPage extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             fontFamily: "SF",
-            primarySwatch: getMaterialColor(Color(0xff3366FF)),
+            primarySwatch: getMaterialColor(const Color(0xff3366FF)),
           ),
           home: Scaffold(
             body: PageView(
-              children: [
-               SplachScreenView(),
+              children: const [
+                //SplachScreenView(),
+                BottomNavigationView()
               ],
             ),
           ),

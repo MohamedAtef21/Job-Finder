@@ -20,13 +20,13 @@ class CreateYourPassView extends StatelessWidget {
           },
           icon: SvgPicture.asset("assets/icons/arrow_left.svg"),
         ),
-        leading: SizedBox(),
+        leading: const SizedBox(),
         leadingWidth: 0,
         elevation: 0,
         backgroundColor: Colors.transparent,
         actions: [
           Padding(
-            padding: EdgeInsetsDirectional.only(end: 24),
+            padding: const EdgeInsetsDirectional.only(end: 24),
             child: Image.asset(
               "assets/images/logo.png",
               height: 19.h,
@@ -37,24 +37,24 @@ class CreateYourPassView extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsetsDirectional.only(start: 24,top: 39,end: 24),
+          padding: const EdgeInsetsDirectional.only(start: 24,top: 39,end: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Create new password",style: TextStyle(fontSize: 28,fontFamily: "SF",fontWeight: FontWeight.w500),),
+              const Text("Create new password",style: TextStyle(fontSize: 28,fontFamily: "SF",fontWeight: FontWeight.w500),),
               SizedBox(height: 8.h,),
-              Text("Set your new password so you can login and\nacces Jobsque",style: TextStyle(fontSize: 16,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff6B7280)),),
+              const Text("Set your new password so you can login and\nacces Jobsque",style: TextStyle(fontSize: 16,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff6B7280)),),
               SizedBox(height: 44.h,),
-              TextPassView(labelText: "Password",inputType: TextInputType.visiblePassword,iconPath: "password"),
+              const TextPassView(labelText: "Password",inputType: TextInputType.visiblePassword,iconPath: "password"),
               SizedBox(height: 12.h,),
-              Text("Password must be at least 8 characters",style: TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),),
+              const Text("Password must be at least 8 characters",style: TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),),
               SizedBox(height: 24.h,),
-              TextPassView(labelText: "Password",inputType: TextInputType.visiblePassword,iconPath: "password"),
+              const TextPassView(labelText: "Password",inputType: TextInputType.visiblePassword,iconPath: "password"),
               SizedBox(height: 12.h,),
-              Text("Both password must match",style: TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),),
+              const Text("Both password must match",style: TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),),
               SizedBox(height: 266.h,),
               ButtonView(textInput: "Reset password", onClick: (){
-                navigateTo(context, PassSuccessView());
+                navigateTo(context, const PassSuccessView());
               }),
             ],
           ),

@@ -10,13 +10,13 @@ class SecondPgaeView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           "Type of work",
           style: TextStyle(
               fontSize: 20, fontFamily: "SF", fontWeight: FontWeight.w500),
         ),
         SizedBox(height: 4.h),
-        Text(
+        const Text(
           "Fill in your bio data correctly",
           style: TextStyle(
             fontSize: 14,
@@ -26,13 +26,13 @@ class SecondPgaeView extends StatelessWidget {
           ),
         ),
         SizedBox(height: 28.h),
-        ApplyContView(title: "Senior UX Designer", content: "CV.pdf . Portfolio.pdf"),
+        const ApplyContView(title: "Senior UX Designer", content: "CV.pdf . Portfolio.pdf"),
         SizedBox(height: 16.h),
-        ApplyContView(title: "Senior UX Designer", content: "CV.pdf . Portfolio.pdf"),
+        const ApplyContView(title: "Senior UX Designer", content: "CV.pdf . Portfolio.pdf"),
         SizedBox(height: 16.h),
-        ApplyContView(title: "Senior UX Designer", content: "CV.pdf . Portfolio.pdf"),
+        const ApplyContView(title: "Senior UX Designer", content: "CV.pdf . Portfolio.pdf"),
         SizedBox(height: 16.h),
-        ApplyContView(title: "Senior UX Designer", content: "CV.pdf . Portfolio.pdf"),
+        const ApplyContView(title: "Senior UX Designer", content: "CV.pdf . Portfolio.pdf"),
       ],
     );
   }

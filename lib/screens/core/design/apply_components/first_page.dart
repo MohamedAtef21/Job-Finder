@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
-import '../text_icon_input.dart';
 
 class FirstPageView extends StatelessWidget {
   const FirstPageView({Key? key}) : super(key: key);
@@ -12,7 +11,7 @@ class FirstPageView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           "Biodata",
           style: TextStyle(
               fontSize: 20, fontFamily: "SF", fontWeight: FontWeight.w500),
@@ -20,7 +19,7 @@ class FirstPageView extends StatelessWidget {
         SizedBox(
           height: 4.h,
         ),
-        Text(
+        const Text(
           "Fill in your bio data correctly",
           style: TextStyle(
             fontSize: 14,
@@ -32,7 +31,7 @@ class FirstPageView extends StatelessWidget {
         SizedBox(
           height: 28.h,
         ),
-        Row(
+        const Row(
           children: [
             Text(
               "Full Name",
@@ -53,9 +52,9 @@ class FirstPageView extends StatelessWidget {
           ],
         ),
         SizedBox(height: 8.h,),
-        TextIconInputView(labelText: "Name", iconPath: "username", obscureText: false, inputType: TextInputType.name),
+      //  const TextIconInputView(labelText: "Name", iconPath: "username", obscureText: false, inputType: TextInputType.name),
         SizedBox(height: 20.h,),
-        Row(
+        const Row(
           children: [
             Text(
               "Email",
@@ -76,9 +75,9 @@ class FirstPageView extends StatelessWidget {
           ],
         ),
         SizedBox(height: 8.h,),
-        TextIconInputView(labelText: "Email", iconPath: "mail", obscureText: false, inputType: TextInputType.emailAddress),
+    //    const TextIconInputView(labelText: "Email", iconPath: "mail", obscureText: false, inputType: TextInputType.emailAddress),
         SizedBox(height: 20.h,),
-        Row(
+        const Row(
           children: [
             Text(
               "No.Handphone",
@@ -102,13 +101,13 @@ class FirstPageView extends StatelessWidget {
         IntlPhoneField(
           decoration: InputDecoration(
             hintText: 'Phone Number',
-            hintStyle:TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),
+            hintStyle:const TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.r),
             ),
           ),
           initialCountryCode: 'EG',
-        )
+        ),
       ],
     );
   }

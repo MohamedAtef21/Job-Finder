@@ -15,7 +15,7 @@ class TextSearchView extends StatelessWidget {
         filled: true,
         hintText: "Search....",
           fillColor: Colors.white,
-          hintStyle: TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),
+          hintStyle: const TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w400,color: Color(0xff9CA3AF)),
         prefixIcon: SvgPicture.asset("assets/icons/search.svg",fit: BoxFit.scaleDown,),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(100.r)
@@ -32,7 +32,7 @@ class DataSearch extends SearchDelegate<String>{
     // action on tapping
     return [
       IconButton(onPressed: (){}, 
-          icon: Icon(Icons.clear)
+          icon: const Icon(Icons.clear)
       )
     ];
   }
@@ -54,7 +54,7 @@ class DataSearch extends SearchDelegate<String>{
   @override
   Widget buildSuggestions(BuildContext context) {
     // what happens when search for something
-    return Text("Hello");
+    return const Text("Hello");
   }
   
 }

@@ -17,9 +17,9 @@ class _ComponentsViewState extends State<ComponentsView> {
   // Color circleColor = Colors.grey;
 
   List<Widget> pages = [
-    FirstPageView(),
-    SecondPgaeView(),
-    ThirdPageView(),
+    const FirstPageView(),
+    const SecondPgaeView(),
+    const ThirdPageView(),
   ];
 
   @override
@@ -27,7 +27,7 @@ class _ComponentsViewState extends State<ComponentsView> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Container(
+        SizedBox(
           height: 80.h,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -50,7 +50,7 @@ class _ComponentsViewState extends State<ComponentsView> {
           ),
         ),
         //SizedBox(height: 8.h),
-        Container(
+        SizedBox(
           height: 20,
           child: Row(
             //mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -63,7 +63,7 @@ class _ComponentsViewState extends State<ComponentsView> {
                     fontWeight: FontWeight.w400,
                     color: Color(currentPage == 0 ? 0xff3366FF : 0xff111827)),
               ),
-              SizedBox(width: 100),
+              const SizedBox(width: 100),
               Text(
                 "Type of work",
                 style: TextStyle(
@@ -72,7 +72,7 @@ class _ComponentsViewState extends State<ComponentsView> {
                     fontWeight: FontWeight.w400,
                     color: Color(currentPage == 1 ? 0xff3366FF : 0xff111827)),
               ),
-              SizedBox(width: 75),
+              const SizedBox(width: 75),
               Text(
                 "Upload portfolio",
                 style: TextStyle(
@@ -95,7 +95,7 @@ class _ComponentsViewState extends State<ComponentsView> {
         ),
         SizedBox(height: 47.h),
         Padding(
-          padding: EdgeInsetsDirectional.only(start: 24, end: 24),
+          padding: const EdgeInsetsDirectional.only(start: 24, end: 24),
           child: SizedBox(
             height: 48.h,
             child: ElevatedButton(

@@ -30,20 +30,20 @@ class _WorkLocationsViewState extends State<WorkLocationsView> with SingleTicker
       width: 327.w,
       height: 50.h,
       decoration: BoxDecoration(
-        color: Color(0xffF4F4F5),
+        color: const Color(0xffF4F4F5),
         borderRadius: BorderRadius.circular(100.r),
       ),
       child: Column(
         children: [
           TabBar(
             indicator: BoxDecoration(
-              color: Color(0xff091A7A),
+              color: const Color(0xff091A7A),
               borderRadius: BorderRadius.circular(100.r),
             ),
-            labelColor: Color(0xffFFFFFF),
-            unselectedLabelColor: Color(0xff6B7280),
+            labelColor: const Color(0xffFFFFFF),
+            unselectedLabelColor: const Color(0xff6B7280),
             controller: tabController,
-            tabs: [
+            tabs: const [
               Tab(text: "Work From Office",),
               Tab(text: "Remote Work",),
             ],

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class ChipView extends StatefulWidget {
   final String textInput,imageinput;
@@ -22,11 +21,11 @@ class _ChipViewState extends State<ChipView> {
         Text(widget.textInput),
       ],
     ),
-      labelStyle: TextStyle(fontSize: 16,fontWeight: FontWeight.w400,fontFamily: "SF",color: Color(0xff111827)),
-      padding: EdgeInsetsDirectional.only(top: 10.5,bottom: 10.5,end: 10.5),
-      side: isSelected ? BorderSide(color: Color(0xff3366FF)): BorderSide(color: Color(0xffE5E7EB)),
+      labelStyle: const TextStyle(fontSize: 16,fontWeight: FontWeight.w400,fontFamily: "SF",color: Color(0xff111827)),
+      padding: const EdgeInsetsDirectional.only(top: 10.5,bottom: 10.5,end: 10.5),
+      side: isSelected ? const BorderSide(color: Color(0xff3366FF)): const BorderSide(color: Color(0xffE5E7EB)),
       selected: isSelected,
-      selectedColor: Color(0xffD6E4FF),
+      selectedColor: const Color(0xffD6E4FF),
       onSelected: (newState){
       isSelected = newState;
       setState(() {});

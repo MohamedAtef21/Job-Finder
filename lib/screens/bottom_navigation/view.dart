@@ -15,11 +15,11 @@ class BottomNavigationView extends StatefulWidget {
 
 class _BottomNavigationViewState extends State<BottomNavigationView> {
   List<Widget> pages = [
-    HomeView(),
-    MessageView(),
-    AppliedView(),
-    SavedView(),
-    ProfileView(),
+    const HomeView(),
+    const MessageView(),
+    const AppliedView(),
+    const SavedView(),
+    const ProfileView(),
   ];
 
   List<String> titles = ["Home", "Messages", "Applied", "Saved", "Profile"];
@@ -31,7 +31,7 @@ class _BottomNavigationViewState extends State<BottomNavigationView> {
     return Scaffold(
       body: pages[currentPage],
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         notchMargin: 41,
         child: Row(
           children: [
@@ -109,12 +109,12 @@ class _ItemBottom extends StatelessWidget {
         child: Container(
           color: Colors.transparent,
           child: Padding(
-            padding: EdgeInsets.only(top: 8, bottom: 8),
+            padding: const EdgeInsets.only(top: 8, bottom: 8),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 SvgPicture.asset(  isSelected ?
-                  "assets/icons/${image}.svg": "assets/icons/${unselectedImage}.svg",
+                  "assets/icons/$image.svg": "assets/icons/$unselectedImage.svg",
                 // color: isSelected ? Theme.of(context).primaryColor : null,
                 ),
                 Text(

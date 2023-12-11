@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:jobfinder/screens/core/logic/helper_method.dart';
 
-import '../../create_account/work_type.dart';
 import '../../log_in_account/log_in.dart';
 
 class TextIconInputPreView extends StatefulWidget {
@@ -12,13 +11,17 @@ class TextIconInputPreView extends StatefulWidget {
   // final bool obscureText;
 
   final TextInputType inputType;
+  Function()? onTap;
+  final TextEditingController control;
 
-  const TextIconInputPreView(
+  TextIconInputPreView(
       {Key? key,
       required this.labelText,
       required this.iconPath,
       //  required this.obscureText,
-      required this.inputType})
+      required this.inputType,
+      required this.onTap,
+      required this.control})
       : super(key: key);
 
   @override
@@ -28,17 +31,21 @@ class TextIconInputPreView extends StatefulWidget {
 class _TextIconInputViewState extends State<TextIconInputPreView> {
   bool _passwordVisible = false;
   String _password = "";
+
   @override
   Widget build(BuildContext context) {
-    Color labelColor =
-        _password.length >= 8 ? Color(0xff60C631) : Color(0xffFF472B);
-    Color textFieldColor =
-        _password.length >= 8 ? Color(0xff9CA3AF) : Color(0xffFF472B);
+    Color labelColor = _password.length >= 8
+        ? const Color(0xff60C631)
+        : const Color(0xffFF472B);
+    Color textFieldColor = _password.length >= 8
+        ? const Color(0xff9CA3AF)
+        : const Color(0xffFF472B);
     bool isPasswordValid = _password.isNotEmpty && _password.length >= 8;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextFormField(
+          controller: widget.control,
           keyboardType: widget.inputType,
           obscureText: !(_passwordVisible && true),
           onChanged: (value) {
@@ -80,10 +87,10 @@ class _TextIconInputViewState extends State<TextIconInputPreView> {
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: textFieldColor),
             ),
-            errorBorder: OutlineInputBorder(
+            errorBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Color(0xffFF472B)),
             ),
-            focusedErrorBorder: OutlineInputBorder(
+            focusedErrorBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Color(0xffFF472B)),
             ),
           ),
@@ -94,42 +101,74 @@ class _TextIconInputViewState extends State<TextIconInputPreView> {
         Text(
           "Password must be at least 8 characters",
           style: TextStyle(
-              fontSize: 16,
-              fontFamily: "SF",
-              fontWeight: FontWeight.w400,
-              color: labelColor,),
+            fontSize: 16,
+            fontFamily: "SF",
+            fontWeight: FontWeight.w400,
+            color: labelColor,
+          ),
         ),
-        SizedBox(height: 105.h,),
+        SizedBox(
+          height: 105.h,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Already have an account?  ",style: TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xff9CA3AF)),),
-            GestureDetector(onTap: (){
-              navigateTo(context, LogInView());
-            },
-                child: Text("Login",style: TextStyle(fontSize: 14,fontFamily: "SF",fontWeight: FontWeight.w500,color: Color(0xff3366FF),),)),
+            const Text(
+              "Already have an account?  ",
+              style: TextStyle(
+                  fontSize: 14,
+                  fontFamily: "SF",
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xff9CA3AF)),
+            ),
+            GestureDetector(
+                onTap: () {
+                  navigateTo(context, const LogInView());
+                },
+                child: const Text(
+                  "Login",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontFamily: "SF",
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xff3366FF),
+                  ),
+                )),
           ],
         ),
-        SizedBox(height: 20.h,),
+        SizedBox(height: 20.h),
         Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(
-              height: 48.h,
-              child: ElevatedButton(onPressed: isPasswordValid ? (){
-                navigateTo(context, WorkTypeView());
-              } : null,
-                style: ButtonStyle(
-                    shape: MaterialStatePropertyAll(
-                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(1000.r)),
-                    ),
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      isPasswordValid ? Color(0xff3366FF) : Color(0xffD1D5DB)
-                  ),
+            GestureDetector(
+              onTap: widget.onTap,
+              child: Container(
+                height: 48,
+                decoration: BoxDecoration(
+                  color: Colors.lightBlue,
+                  borderRadius: BorderRadius.circular(1000),
                 ),
-                  child: Text("Create account"),
+                child: const Center(
+                  child: Text("Login"),
+                ),
               ),
             ),
+            // SizedBox(
+            //   height: 48.h,
+            //   child: ElevatedButton(onPressed: isPasswordValid ? (){
+            //     widget.onTap;
+            //   } : null,
+            //     style: ButtonStyle(
+            //         shape: MaterialStatePropertyAll(
+            //             RoundedRectangleBorder(borderRadius: BorderRadius.circular(1000.r)),
+            //         ),
+            //       backgroundColor: MaterialStateProperty.all<Color>(
+            //           isPasswordValid ? const Color(0xff3366FF) : const Color(0xffD1D5DB)
+            //       ),
+            //     ),
+            //       child: const Text("Create account"),
+            //   ),
+            // ),
           ],
         ),
       ],

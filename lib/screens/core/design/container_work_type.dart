@@ -14,19 +14,19 @@ class WorkTypeChooseView extends StatefulWidget {
 }
 
 class _WorkTypeChooseViewState extends State<WorkTypeChooseView> {
-  Color containerColor = Color(0xffFAFAFA);
-  Color borderColor = Color(0xffD1D5DB);
+  Color containerColor = const Color(0xffFAFAFA);
+  Color borderColor = const Color(0xffD1D5DB);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        containerColor = containerColor == Color(0xffFAFAFA)
-            ? Color(0xffD6E4FF)
-            : Color(0xffFAFAFA);
-        borderColor = borderColor == Color(0xffD1D5DB)
-            ? Color(0xff3366FF)
-            : Color(0xffD1D5DB);
+        containerColor = containerColor == const Color(0xffFAFAFA)
+            ? const Color(0xffD6E4FF)
+            : const Color(0xffFAFAFA);
+        borderColor = borderColor == const Color(0xffD1D5DB)
+            ? const Color(0xff3366FF)
+            : const Color(0xffD1D5DB);
         setState(() {});
       },
       child: Container(
@@ -38,7 +38,7 @@ class _WorkTypeChooseViewState extends State<WorkTypeChooseView> {
           color: containerColor,
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.only(top: 20, start: 14),
+          padding: const EdgeInsetsDirectional.only(top: 20, start: 14),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -58,7 +58,7 @@ class _WorkTypeChooseViewState extends State<WorkTypeChooseView> {
               ),
               Text(
                 widget.textInput,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 16,
                     fontFamily: "SF",
                     fontWeight: FontWeight.w400),
